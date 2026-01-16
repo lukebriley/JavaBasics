@@ -1,4 +1,4 @@
-package io.github.nathanjrussell;
+package io.github.lukebriley;
 
 public class Cool {
 
