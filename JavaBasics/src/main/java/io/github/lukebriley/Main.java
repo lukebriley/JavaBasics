@@ -4,16 +4,9 @@ package io.github.lukebriley;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Everyone!");
+        Cooler mySampleCoolerClass = new Cooler();
+        // Cooler = class name      Cooler() = constructor
+        mySampleCoolerClass.setBirthYear(2004);
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Count: " + i);
-        }
-
-        int i = 1;
-        while (i <= 5) {
-            System.out.println("While Count: " + i);
-            i++;
-        }
     }
 }

@@ -1,14 +1,14 @@
 package io.github.lukebriley;
 
-public class Cool {
+public class Cooler {
 
     public int value1 = 42;
-    private int value2 = 7;
+    private int birthYear;
     final public int finalValue1 = 100;
     final private int finalValue2;
 
-    public Cool() {
-        System.out.println("Hello from Cool class constructor!");
+    public Cooler() {
+        System.out.println("Hello from Cooler class constructor!");
         finalValue2 = 200;
     }
 
@@ -16,8 +16,8 @@ public class Cool {
         System.out.println("Hello, World!");
     }
 
-    public int getValue2() {
-        return value2;
+    public int getBirthYear() {
+        return this.birthYear;
     }
 
     public int getFinalValue2() {
@@ -28,14 +28,17 @@ public class Cool {
         this.value1 = value1;
     }
 
-    public void setValue2(int value2) {
-        this.value2 = value2;
+    public void setBirthYear(int birthYear) {
+        if (birthYear < 1900 || birthYear > 2026) {
+            throw new IllegalArgumentException("Birthyear must be between 1900 and 2026");
+        }
+        this.birthYear = birthYear;
     }
 
 
     public void displayValues() {
         System.out.println("value1: " + value1);
-        System.out.println("value2: " + value2);
+        System.out.println("value2: " + birthYear);
         System.out.println("finalValue1: " + finalValue1);
         System.out.println("finalValue2: " + finalValue2);
     }
